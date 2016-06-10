@@ -1,10 +1,10 @@
-Docker NodeJS Example with Docker Swarm, Nginx, and Interlock 
+Docker NodeJS Example with Docker Swarm, Nginx, and Interlock
 =====================
 
 ### Prerequisites
 
 - Docker CS Engine 1.11.2-cs3
-- DTR and UCP
+- DTR 2.0.1 and UCP 1.1.1
 - Interlock 1.2
 
 ## Setup UCP and DTR
@@ -31,7 +31,7 @@ docker build -t yongshin/docker-node-app .
 
 ## Configure Interlock for Swarm
 ```
-export SWARM_HOST=tcp://$(docker-machine ip manager):3376
+export SWARM_HOST=tcp://${UCP_IPADDR}:3376
 ```
 
 ## Start Example Application
