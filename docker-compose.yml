@@ -40,19 +40,17 @@ services:
       INTERLOCK_CONFIG: |
         ListenAddr = ":8080"
         DockerURL = "${SWARM_HOST}"
-        TLSCACert = "/var/lib/boot2docker/ca.pem"
-        TLSCert = "/var/lib/boot2docker/server.pem"
-        TLSKey = "/var/lib/boot2docker/server-key.pem"
-
         [[Extensions]]
         Name = "nginx"
         ConfigPath = "/etc/nginx/nginx.conf"
         PidPath = "/var/run/nginx.pid"
-        TemplatePath = ""
+        TemplatePath = "/etc/interlock/nginx.conf.template"
         MaxConn = 1024
         Port = 80
+        NginxPlusEnabled = false
     volumes:
-      - /var/lib/boot2docker:/var/lib/boot2docker:ro
+      - ./config.toml:/etc/interlock/config.toml
+      - nginx:/etc/nginx
 
   nginx:
     image: nginx:latest
@@ -64,6 +62,8 @@ services:
       - 80:80
     labels:
       - "interlock.ext.name=nginx"
+    volumes:
+      - nginx:/etc/nginx
 
 volumes:
   db:
