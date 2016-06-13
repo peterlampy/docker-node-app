@@ -29,8 +29,8 @@ services:
      - db:/data/db
 
   interlock:
-    image: ehazlett/interlock
-    command: -D run -c /etc/interlock/config.toml
+    image: ehazlett/interlock:latest
+    command: -D run 
     tty: true
     ports:
       - 4000
