@@ -2,7 +2,7 @@ version: '2'
 
 services:
   app:
-    image: docker-datacenter/docker-app-swarm-nginx
+    image: $DTR_IPADDR/docker-datacenter/docker-app-swarm-nginx
     environment:
       PORT: 4000
       MONGODB_SERVICE_SERVICE_HOST: "mongodb1"
