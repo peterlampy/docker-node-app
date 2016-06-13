@@ -17,12 +17,6 @@ Set up UCP and DTR per instructions found here: https://github.com/yongshin/vagr
 docker-datacenter/docker-node-app-swarm-nginx
 ```
 
-## Change New Relic license key (OPTIONAL)
-Change the license key found in newrelic.js
-```
-license_key: '<enter license key from account settings>'
-```
-
 ## Build Docker Image
 ```  
 cd ~/docker-node-app-swarm-nginx
