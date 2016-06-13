@@ -30,7 +30,7 @@ services:
 
   interlock:
     image: ehazlett/interlock:latest
-    command: -D run 
+    command: -D run
     tty: true
     ports:
       - 4000
@@ -40,6 +40,9 @@ services:
       INTERLOCK_CONFIG: |
         ListenAddr = ":8080"
         DockerURL = "${SWARM_HOST}"
+        TLSCACert = "/certs/ca.pem"
+        TLSCert = "/certs/cert.pem"
+        TLSKey = "/certs/key.pem"
         [[Extensions]]
         Name = "nginx"
         ConfigPath = "/etc/nginx/nginx.conf"
@@ -50,6 +53,8 @@ services:
         NginxPlusEnabled = false
     volumes:
       - nginx:/etc/nginx
+      - ucp-node-certs:/certs
+    restart: always
 
   nginx:
     image: nginx:latest
@@ -63,6 +68,7 @@ services:
       - "interlock.ext.name=nginx"
     volumes:
       - nginx:/etc/nginx
+    restart: always
 
 volumes:
   db:
