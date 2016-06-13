@@ -44,12 +44,11 @@ services:
         Name = "nginx"
         ConfigPath = "/etc/nginx/nginx.conf"
         PidPath = "/var/run/nginx.pid"
-        TemplatePath = "/etc/interlock/nginx.conf.template"
+        TemplatePath = ""
         MaxConn = 1024
         Port = 80
         NginxPlusEnabled = false
     volumes:
-      - ./config.toml:/etc/interlock/config.toml
       - nginx:/etc/nginx
 
   nginx:
