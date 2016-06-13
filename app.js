@@ -1,7 +1,6 @@
 /**
  * Module dependencies.
  */
-var newrelic = require('newrelic');
 var express = require('express');
 var cookieParser = require('cookie-parser');
 var compress = require('compression');
@@ -56,7 +55,6 @@ mongoose.connection.on('error', function(err) {
  */
 app.use(function(req, res, next) {
     // generate unique timing header on every request
-    app.locals.nreum = newrelic.getBrowserTimingHeader();
     next();
 });
 app.set('port', process.env.PORT || 8080);
