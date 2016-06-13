@@ -2,7 +2,7 @@ version: '2'
 
 services:
   app:
-    image: yongshin/docker-node-app
+    image: yongshin/docker-app-swarm-nginx
     environment:
       PORT: 4000
       MONGODB_SERVICE_SERVICE_HOST: "mongodb1"
@@ -47,7 +47,6 @@ services:
         Name = "nginx"
         ConfigPath = "/etc/nginx/nginx.conf"
         PidPath = "/var/run/nginx.pid"
-        TemplatePath = ""
         MaxConn = 1024
         Port = 80
         NginxPlusEnabled = false
