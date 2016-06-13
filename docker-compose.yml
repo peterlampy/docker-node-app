@@ -68,6 +68,8 @@ services:
 volumes:
   db:
     driver: local
+  nginx:
+    driver: local
 
 networks:
   backend-network:
