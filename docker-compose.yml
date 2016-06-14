@@ -67,7 +67,8 @@ volumes:
   nginx:
     driver: local
   ucp-node-certs:
-    external: true
+    external:
+      name: ucp-node/ucp-node-certs
 
 networks:
   backend-network:
