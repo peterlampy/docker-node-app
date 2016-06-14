@@ -4,8 +4,8 @@ services:
   app:
     image: $DTR_IPADDR/docker-datacenter/docker-app-swarm-nginx
     environment:
-      - PORT: 4000
-      - MONGODB_SERVICE_SERVICE_HOST: 'mongodb1'
+      - "PORT=4000"
+      - "MONGODB_SERVICE_SERVICE_HOST=mongodb1"
       - "constraint:node==node-1"
     ports:
       - 4000
@@ -38,7 +38,7 @@ services:
     networks:
       - frontend-network
     environment:
-      - "constraint:node==node-1"  
+      - "constraint:node==node-1"
     volumes:
       - nginx:/etc/nginx
       - ucp-node-certs:/certs
