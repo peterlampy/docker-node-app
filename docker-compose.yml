@@ -6,7 +6,7 @@ services:
     environment:
       - "PORT=4000"
       - "MONGODB_SERVICE_SERVICE_HOST=mongodb1"
-      - "constraint:node==node-1"
+      - "constraint:region==us"
     ports:
       - 4000
     labels:
@@ -22,6 +22,8 @@ services:
     restart: always
     image: clusterhq/mongodb
     container_name: "mongodb1"
+    environment:
+      - "constraint:region==us"
     networks:
       - backend-network
     ports:
@@ -38,7 +40,7 @@ services:
     networks:
       - frontend-network
     environment:
-      - "constraint:node==node-1"
+      - "constraint:region==us"
     volumes:
       - nginx:/etc/nginx
       - ucp-node-certs:/certs
@@ -59,7 +61,7 @@ services:
       - nginx:/etc/nginx
     restart: always
     environment:
-      - "constraint:node==node-1"
+      - "constraint:region==us"
 
 volumes:
   db:
