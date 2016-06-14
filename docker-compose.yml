@@ -4,8 +4,9 @@ services:
   app:
     image: $DTR_IPADDR/docker-datacenter/docker-app-swarm-nginx
     environment:
-      PORT: 4000
-      MONGODB_SERVICE_SERVICE_HOST: "mongodb1"
+      - PORT: 4000
+      - MONGODB_SERVICE_SERVICE_HOST: 'mongodb1'
+      - "constraint:node==node-1"
     ports:
       - 4000
     labels:
@@ -37,6 +38,7 @@ services:
     networks:
       - frontend-network
     environment:
+      - "constraint:node==node-1"
       INTERLOCK_CONFIG: |
         ListenAddr = ":8080"
         DockerURL = "${SWARM_HOST}"
@@ -68,6 +70,8 @@ services:
     volumes:
       - nginx:/etc/nginx
     restart: always
+    environment:
+      - "constraint:node==node-1"
 
 volumes:
   db:
