@@ -40,7 +40,7 @@ services:
     networks:
       - frontend-network
     environment:
-      - "constraint:region==us"
+      - "constraint:node==ucp-node"
     volumes:
       - nginx:/etc/nginx
       - ucp-node-certs:/certs
