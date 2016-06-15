@@ -43,7 +43,7 @@ services:
       - "constraint:region==us"
     volumes:
       - nginx:/etc/nginx
-      - ucp-node-certs:/certs
+      - ucp-node-certs:/certs:ro
       - ./config.toml:/etc/interlock/config.toml
     restart: always
 
