@@ -68,8 +68,6 @@ volumes:
     driver: local
   nginx:
     driver: local
-  ucp-node-certs:
-    driver: local
 
 networks:
   backend-network:
