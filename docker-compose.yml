@@ -43,7 +43,7 @@ services:
       - "constraint:region==us"
     volumes:
       - nginx:/etc/nginx
-      - ucp-node-certs:/certs
+      - /var/lib/jenkins/bundle:/certs
       - ./config.toml:/etc/interlock/config.toml
     restart: always
 
@@ -68,9 +68,6 @@ volumes:
     driver: local
   nginx:
     driver: local
-  ucp-node-certs:
-    external:
-      name: "ucp-node/ucp-node-certs"
 
 networks:
   backend-network:
