@@ -43,7 +43,7 @@ services:
       - "constraint:region==us"
     volumes:
       - nginx:/etc/nginx
-      - ucp-node/ucp-node-certs:/certs
+      - ucp-node-certs:/certs
       - ./config.toml:/etc/interlock/config.toml
     restart: always
 
@@ -68,6 +68,9 @@ volumes:
     driver: local
   nginx:
     driver: local
+  ucp-node-certs:
+    external:
+      name: "ucp-node/ucp-node-certs"
 
 networks:
   backend-network:
