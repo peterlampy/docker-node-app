@@ -32,7 +32,7 @@ services:
      - db:/data/db
 
   nginx:
-    image: nginx/nginx:latest
+    image: nginx:latest
     entrypoint: nginx
     command: -g "daemon off;" -c /etc/nginx/nginx.conf
     ports:
