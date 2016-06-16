@@ -9,7 +9,7 @@ Docker NodeJS Example with Docker Swarm, Nginx, and Interlock
 
 ## Setup UCP and DTR
 
-Set up UCP and DTR per instructions found here: https://github.com/yongshin/vagrant
+Set up UCP and DTR per instructions found here: https://github.com/yongshin/vagrant. Create ```frontend-network``` network in UCP. 
 
 ## Create DTR repo
 
