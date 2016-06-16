@@ -32,7 +32,7 @@ services:
      - db:/data/db
 
   nginx:
-    image: nginx:latest
+    image: hub.docker.com/nginx:latest
     entrypoint: nginx
     command: -g "daemon off;" -c /etc/nginx/nginx.conf
     ports:
@@ -42,7 +42,8 @@ services:
     links:
       - app
     restart: always
-
+    networks:
+      - frontend-network
 
 volumes:
   db:
