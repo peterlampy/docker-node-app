@@ -6,7 +6,7 @@ services:
     environment:
       - "PORT=4000"
       - "MONGODB_SERVICE_SERVICE_HOST=mongodb1"
-      - "constraint:nodeType=app"
+      - "constraint:nodeType==app"
     ports:
       - 4000
     labels:
@@ -23,7 +23,7 @@ services:
     image: clusterhq/mongodb
     container_name: "mongodb1"
     environment:
-      - "constraint:nodeType=app"
+      - "constraint:nodeType==app"
     networks:
       - backend-network
     ports:
