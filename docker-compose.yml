@@ -8,9 +8,6 @@ services:
       - "constraint:nodeType==app"
     ports:
       - 4000
-    labels:
-      - "interlock.hostname=test"
-      - "interlock.domain=local"
     depends_on:
       - db
     networks:
