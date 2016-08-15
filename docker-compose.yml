@@ -38,5 +38,4 @@ networks:
   backend-network:
     driver: overlay
   frontend-network:
-    external:
-      name: frontend-network
+    driver: overlay
