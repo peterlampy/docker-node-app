@@ -5,9 +5,12 @@ services:
     image: $DTR_IPADDR/engineering/docker-app-swarm-nginx:latest
     environment:
       - "MONGODB_SERVICE_SERVICE_HOST=mongodb1"
-      - "constraint:nodeType==app"
     ports:
       - 4000
+    labels:
+      - "interlock.hostname=test"
+      - "interlock.domain=local"
+      - "nodeType=app"
     depends_on:
       - db
     networks:
