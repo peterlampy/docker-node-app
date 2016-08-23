@@ -1,4 +1,4 @@
-Docker NodeJS Example with Docker Swarm, Nginx, and Interlock
+Docker NodeJS Example with Docker Swarm
 =====================
 
 ### Prerequisites
@@ -9,17 +9,17 @@ Docker NodeJS Example with Docker Swarm, Nginx, and Interlock
 
 ## Setup UCP and DTR
 
-Set up UCP and DTR per instructions found here: https://github.com/yongshin/vagrant. Create ```frontend-network``` network in UCP. 
+Set up UCP and DTR per instructions found here: https://github.com/yongshin/vagrant.
 
 ## Create DTR repo
 
 ```
-docker-datacenter/docker-node-app-swarm-nginx
+docker-datacenter/docker-node-app
 ```
 
 ## Build Docker Image
 ```  
-cd ~/docker-node-app-swarm-nginx
+cd ~/docker-node-app
 docker build -t yongshin/docker-node-app .
 ```
 
