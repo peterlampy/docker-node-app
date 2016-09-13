@@ -33,9 +33,3 @@ services:
 volumes:
   db:
     driver: local
-
-networks:
-  external:
-    name: backend-network
-  external:
-    name: frontend-network
