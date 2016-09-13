@@ -2,7 +2,7 @@ version: '2'
 
 services:
   app:
-    image: $DTR_IPADDR/engineering/docker-app-swarm-nginx:latest
+    image: $DTR_IPADDR/engineering/docker-node-app:latest
     environment:
       - "MONGODB_SERVICE_SERVICE_HOST=mongodb1"
       - "constraint:nodeType==app"
