@@ -33,3 +33,9 @@ services:
 volumes:
   db:
     driver: local
+
+networks:
+  backend-network:
+    driver: overlay
+  frontend-network:
+    driver: overlay
