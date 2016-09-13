@@ -35,7 +35,7 @@ volumes:
     driver: local
 
 networks:
-  backend-network:
-    driver: overlay
-  frontend-network:
-    driver: overlay
+  external:
+    name: backend-network
+  external:
+    name: frontend-network
