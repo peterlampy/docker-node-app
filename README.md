@@ -8,7 +8,7 @@ Docker NodeJS Example with Docker Swarm
 
 ## Setup UCP and DTR
 
-Set up UCP and DTR per instructions found here: https://github.com/yongshin/vagrant.
+Set up UCP and DTR per instructions found here: https://github.com/yongshin/vagrant-vancouver.
 
 ## Create DTR repo
 
@@ -30,5 +30,5 @@ docker build -t yongshin/docker-node-app .
 ## Stop all
 In case you need to stop everything run:
 ```
-docker-compose stop
+./stop-service.sh
 ```
