@@ -19,14 +19,12 @@ services:
       - nodeapp-network
 
   db:
-    restart: always
     image: clusterhq/mongodb
     deploy:
       replicas: 1
       placement:
         constraints:
           - node.labels.type == app
-    container_name: "mongodb1"
     networks:
       - ucp-hrm
       - nodeapp-network

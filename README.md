@@ -24,11 +24,12 @@ docker build -t yongshin/docker-node-app .
 
 ## Start Example Application
 ```
-./start-service.sh
+# Source client bundle
+docker stack deploy -c docker-compose.yml nodeapp
 ```
 
 ## Stop all
 In case you need to stop everything run:
 ```
-./stop-service.sh
+docker stack rm nodeapp
 ```
