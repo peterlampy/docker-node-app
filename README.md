@@ -24,6 +24,7 @@ docker build -t yongshin/docker-node-app .
 
 ## Start Example Application
 ```
+export DTR_IPADDR=172.28.128.4
 # Source client bundle
 docker stack deploy -c docker-compose.yml nodeapp
 ```
