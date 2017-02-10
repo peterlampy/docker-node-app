@@ -13,7 +13,7 @@ Set up UCP and DTR per instructions found here: https://github.com/yongshin/vagr
 ## Create DTR repo
 
 ```
-docker-datacenter/docker-node-app
+engineering/docker-node-app
 ```
 
 ## Build Docker Image
