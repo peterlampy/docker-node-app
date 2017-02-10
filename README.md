@@ -3,7 +3,7 @@ Docker NodeJS Example with Docker Swarm
 
 ### Prerequisites
 
-- Docker CS Engine 1.13.0-cs1-rc1
+- Docker CS Engine 1.13.1
 - DTR 2.2.0 and UCP 2.1.0
 
 ## Setup UCP and DTR
