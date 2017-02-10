@@ -11,7 +11,7 @@ services:
       labels:
         com.docker.ucp.mesh.http: "external_route=http://nodeapp.local,internal_port=4000"
     environment:
-      - "MONGODB_SERVICE_SERVICE_HOST=mongodb"
+      - "MONGODB_SERVICE_SERVICE_HOST=nodeapp_db"
     ports:
       - 4000
     networks:
@@ -26,7 +26,6 @@ services:
         constraints:
           - node.labels.type == app
     networks:
-      - ucp-hrm
       - nodeapp-network
     ports:
      - 27017
