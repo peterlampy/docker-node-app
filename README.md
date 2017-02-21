@@ -26,7 +26,7 @@ docker build -t yongshin/docker-node-app .
 ```
 export DTR_IPADDR=172.28.128.4
 # Source client bundle
-docker stack deploy -c docker-compose.yml nodeapp
+docker stack deploy -f docker-compose.yml nodeapp
 ```
 
 ## Stop all
