@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   app:
-    image: $DTR_IPADDR/engineering/docker-node-app:latest
+    image: $DTR_IPADDR/engineering/docker-node-app:1.${BUILD_NUMBER}
     deploy:
       replicas: 3
       placement:
