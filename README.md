@@ -19,6 +19,8 @@ engineering/docker-node-app
 ## Build Docker Image
 ```  
 export DTR_IPADDR=dtr.local
+
+git clone git@github.com:yongshin/docker-node-app.git
 cd ~/docker-node-app
 docker build -t $DTR_IPADDR/engineering/docker-node-app .
 ```
