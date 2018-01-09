@@ -38,6 +38,6 @@ docker stack rm nodeapp
 
 ### Try deploying app locally for development on Docker CE
 ```
-export DTR_IPADDR=dtr.local
+docker build -t yongshin/docker-node-app .
 docker stack deploy -c docker-compose-local.yml nodeapp
 ```
