@@ -1,4 +1,4 @@
-Docker NodeJS Example with Docker EE 17.06
+# Docker NodeJS Example with Docker EE 17.06
 ------------------------------------------
 
 ### Prerequisites
@@ -6,7 +6,7 @@ Docker NodeJS Example with Docker EE 17.06
 - Docker EE 17.06 Standard and Advanced
 - DTR 2.4.x and UCP 2.2.x
 
-## Setup UCP and DTR
+### Setup UCP and DTR
 
 Set up UCP and DTR per instructions found here: https://github.com/yongshin/vagrant-docker-ee-ubuntu.
 
