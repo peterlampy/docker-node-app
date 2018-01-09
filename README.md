@@ -1,14 +1,14 @@
 Docker NodeJS Example with Docker EE 17.06
-=====================
+------------------------------------------
 
 ### Prerequisites
 
 - Docker EE 17.06 Standard and Advanced
-- DTR 2.3.0 and UCP 2.2.0
+- DTR 2.4.x and UCP 2.2.x
 
 ## Setup UCP and DTR
 
-Set up UCP and DTR per instructions found here: https://github.com/yongshin/vagrant-vancouver.
+Set up UCP and DTR per instructions found here: https://github.com/yongshin/vagrant-docker-ee-ubuntu.
 
 ## Create DTR repo
 
@@ -18,13 +18,13 @@ engineering/docker-node-app
 
 ## Build Docker Image
 ```  
+export DTR_IPADDR=dtr.local
 cd ~/docker-node-app
-docker build -t yongshin/docker-node-app .
+docker build -t $DTR_IPADDR/engineering/docker-node-app .
 ```
 
 ## Start Example Application
 ```
-export DTR_IPADDR=david.dtr.com
 # Source client bundle
 docker stack deploy -c docker-compose.yml nodeapp
 ```
@@ -33,4 +33,10 @@ docker stack deploy -c docker-compose.yml nodeapp
 In case you need to stop everything run:
 ```
 docker stack rm nodeapp
+```
+
+## Try deploying app locally for development on Docker CE
+```
+export DTR_IPADDR=dtr.local
+docker stack deploy -c docker-compose-local.yml nodeapp
 ```
