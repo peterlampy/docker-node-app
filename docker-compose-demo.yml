@@ -2,11 +2,11 @@ version: '3.2'
 
 services:
   app:
-    image: yongshin/docker-node-app
+    image: peterlampy/docker-node-app
     deploy:
       replicas: 3
       labels:
-        com.docker.ucp.mesh.http: "external_route=http://nodeapp.david.dtcntr.net,internal_port=4000"
+        com.docker.ucp.mesh.http: "external_route=http://nodeapp.local,internal_port=4000"
     environment:
       - "MONGODB_SERVICE_SERVICE_HOST=nodeapp_db"
     ports:
