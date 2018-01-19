@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   app:
-    image: peterlampy/docker-node-app
+    image: 172.16.1.205/peterlampy/docker-node-app
     deploy:
       replicas: 3
       labels:
