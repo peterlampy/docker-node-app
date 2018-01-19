@@ -1,4 +1,4 @@
-# Docker NodeJS Example with Docker EE 17.06
+# Docker NodeJS Example with Docker EE 17.06.00
 
 ### Prerequisites
 

@@ -1,3 +1,4 @@
+# Test
 FROM node:9-alpine
 
 # Create app directory
